@@ -144,46 +144,48 @@ class ProductManager {
   };
 }
 
-const manager = new ProductManager("data.json");
+// PARA REALIZAR EL TEST DESCOMENTAR EL CODIGO DE ABAJO
 
-(async () => {
-  try {
-    await manager.getProducts();
+// const manager = new ProductManager("data.json");
 
-    const productToAdd = {
-      title: "producto prueba",
-      description: "Este es un producto prueba",
-      price: 200,
-      thumbnail: "Sin imagen",
-      code: "abc123",
-      stock: 25,
-    };
+// (async () => {
+//   try {
+//     await manager.getProducts();
 
-    const productToAdd2 = {
-      title: "producto prueba 2",
-      description: "Este es el segundo producto prueba",
-      price: 400,
-      thumbnail: "Sin imagen",
-      code: "def123",
-      stock: 15,
-    };
+//     const productToAdd = {
+//       title: "producto prueba",
+//       description: "Este es un producto prueba",
+//       price: 200,
+//       thumbnail: "Sin imagen",
+//       code: "abc123",
+//       stock: 25,
+//     };
 
-    await manager.addProduct(productToAdd);
-    await manager.getProducts();
-    await manager.addProduct(productToAdd2);
-    await manager.getProducts();
+//     const productToAdd2 = {
+//       title: "producto prueba 2",
+//       description: "Este es el segundo producto prueba",
+//       price: 400,
+//       thumbnail: "Sin imagen",
+//       code: "def123",
+//       stock: 15,
+//     };
 
-    await manager.updateProduct(1, {
-      title: "producto prueba editado",
-      description: "editado satisfactoriamente",
-    });
+//     await manager.addProduct(productToAdd);
+//     await manager.getProducts();
+//     await manager.addProduct(productToAdd2);
+//     await manager.getProducts();
 
-    await manager.getProductById(2);
+//     await manager.updateProduct(1, {
+//       title: "producto prueba editado",
+//       description: "editado satisfactoriamente",
+//     });
 
-    await manager.deleteProduct(2);
+//     await manager.getProductById(2);
 
-    await manager.getProducts();
-  } catch (error) {
-    console.error(error.message);
-  }
-})();
+//     await manager.deleteProduct(2);
+
+//     await manager.getProducts();
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// })();
